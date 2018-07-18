@@ -1,3 +1,4 @@
+```
 # Public node
 
 ####################
@@ -74,7 +75,4 @@ tezos-node identity generate 26.
 #chmod +x SumoCollector.sh
 #./SumoCollector.sh -q -Vsumo.accessid=<accessId> -Vsumo.accesskey=<accessKey> -VsyncSources=/home/tezos/tezos/nohup.out -Vcollector.name=tezos-public
 
-
-
-
-
+```
