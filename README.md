@@ -47,7 +47,6 @@ ufw enable
 
 # TODO any other hardening
 # TODO sort out the sshd config
-# TODO remove any dodgy ssh keys (added by cloud provider for example)
 # TODO encrypt?
 
 ############################
