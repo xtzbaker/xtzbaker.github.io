@@ -3,7 +3,6 @@ layout: post
 title:  "Secure Tezos Baking"
 date:   2018-07-22 07:24:29 +0000
 author: xtzbaker
-categories: bakejar tezos update
 ---
 
 This is the first post in a multi part tutorial, after which you will have a reasonably secure baking infrastructure on which you can bake Tezos and act as a delegation service if you chose.  Here we will outline the rough structure of our target architecture and follow up with subsequent posts implementing each part.
