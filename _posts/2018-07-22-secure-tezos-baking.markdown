@@ -2,6 +2,7 @@
 layout: post
 title:  "Secure Tezos Baking"
 date:   2018-07-22 07:24:29 +0000
+author: xtzbaker
 categories: bakejar tezos update
 ---
 
