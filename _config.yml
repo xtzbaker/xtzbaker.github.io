@@ -16,7 +16,7 @@
 title: BakeJar
 email: bakejar@bakejar.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Guidelines for becoming a baker for Tezos and how to secure your infrastructure.
+  Secure baking guidelines for Tezos
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.bakejar.com" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
