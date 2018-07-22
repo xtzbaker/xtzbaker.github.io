@@ -28,7 +28,7 @@ theme: jekyll-theme-hacker
 plugins:
   - jekyll-feed
 
-show_downloads: false
+show_downloads: "false"
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
