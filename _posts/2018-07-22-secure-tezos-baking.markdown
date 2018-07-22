@@ -6,8 +6,6 @@ author: xtzbaker
 categories: bakejar tezos update
 ---
 
-# Secure Tezos Baking Infrastructure
-
 This is the first post in a multi part tutorial, after which you will have a reasonably secure baking infrastructure on which you can bake Tezos and act as a delegation service if you chose.  Here we will outline the rough structure of our target architecture and follow up with subsequent posts implementing each part.
 
 Whilst you are free to make use of any OS you like whilst following these guides, we will target Ubuntu Xenial (64-bit) so if you are using any other OS/Processor you will need to make the necessary amendments.
