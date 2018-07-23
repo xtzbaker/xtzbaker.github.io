@@ -9,9 +9,9 @@ author: xtzbaker
 
 Whilst it is possible to setup your nodes on a VPS/Virtual Machine, we recommend obtaining dedicated servers.  Cheap BareMetal providers are listed below, we recomend enabling MFA.
 
-- Vultr
-- Scaleway
-- Kimsufi (ovh or soyoustart are the more premium versions of this provider)
+- [Vultr](https://www.vultr.com/)
+- [Scaleway](https://www.scaleway.com/)
+- [Kimsufi](https://www.kimsufi.com/) ([OVH](https://ovhcloud.com/) or [So You Start](https://www.soyoustart.com/) are the more premium versions of this provider)
 
 ## Compile Tezos Binaries
 
