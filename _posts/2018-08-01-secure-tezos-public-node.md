@@ -163,6 +163,29 @@ systemctl enable tezos.service
 systemctl start tezos.service
 ```
 
-Your tezos node should now be up and running.  We recommend setting up a security group on your cloud provider that drops inbound connections to port 22 and adding your node to it when you do not need remote access to the node.
+Your tezos node should now be up and running.  You can validate by checking the logs using `journalctl`, it might take a few seconds once the node starts before you start seeing blcoks validating. Output should look something like the below. 
+
+```
+# journalctl -f -u tezos.service
+-- Logs begin at Wed 2018-08-01 19:37:37 UTC. --
+Aug 01 19:56:35 xxx tezos-node[17054]: Aug  1 19:56:35 - node.main: Not listening to RPC calls.
+Aug 01 19:56:35 xxx tezos-node[17054]: Aug  1 19:56:35 - node.main: The Tezos node is now running!
+Aug 01 19:56:36 xxx tezos-node[17054]: Aug  1 19:56:36 - validator.peer(1): Worker started for NetXdQprcVkpa:idrHo2wg7jhU
+Aug 01 19:56:36 xxx tezos-node[17054]: Aug  1 19:56:36 - validator.peer(2): Worker started for NetXdQprcVkpa:idtktSgf8Lsy
+Aug 01 19:56:36 xxx tezos-node[17054]: Aug  1 19:56:36 - validator.peer(3): Worker started for NetXdQprcVkpa:idtCGVJpmEtW
+Aug 01 19:56:36 xxx tezos-node[17054]: Aug  1 19:56:36 - validator.peer(4): Worker started for NetXdQprcVkpa:ids5NrMi5ZYV
+Aug 01 19:56:36 xxx tezos-node[17054]: Aug  1 19:56:36 - validator.peer(5): Worker started for NetXdQprcVkpa:idshJtmNkqJa
+Aug 01 19:56:36 xxx tezos-node[17054]: Aug  1 19:56:36 - validator.peer(6): Worker started for NetXdQprcVkpa:ids4dakBa2Wd
+Aug 01 19:56:36 xxx tezos-node[17054]: Aug  1 19:56:36 - validator.peer(7): Worker started for NetXdQprcVkpa:idtaBvd4ZzCt
+Aug 01 19:56:36 xxx tezos-node[17054]: Aug  1 19:56:36 - validator.peer(8): Worker started for NetXdQprcVkpa:idsV3asub2cz
+Aug 01 19:57:02 xxx tezos-node[17054]: Aug  1 19:57:02 - validator.block: Block BLSqrcLvFtqVCx8WSqkVJypW2kAVRM3eEj2BHgBsB6kb24NqYev succesfully validated
+Aug 01 19:57:02 xxx tezos-node[17054]: Aug  1 19:57:02 - validator.block: Pushed: 2018-08-01T19:56:41Z, Treated: 2018-08-01T19:56:41Z, Completed: 2018-08-01T19:57:02Z
+Aug 01 19:57:02 xxx tezos-node[17054]: Aug  1 19:57:02 - prevalidator(1): switching to new head BLSqrcLvFtqVCx8WSqkVJypW2kAVRM3eEj2BHgBsB6kb24NqYev
+Aug 01 19:57:02 xxx tezos-node[17054]: Aug  1 19:57:02 - prevalidator(1): Pushed: 2018-08-01T19:57:02Z, Treated: 2018-08-01T19:57:02Z, Completed: 2018-08-01T19:57:02Z
+Aug 01 19:57:02 xxx tezos-node[17054]: Aug  1 19:57:02 - validator.chain(1): Update current head to BLSqrcLvFtqVCx8WSqkVJypW2kAVRM3eEj2BHgBsB6kb24NqYev (fitness 00::0000000000000001), same branch
+Aug 01 19:57:02 xxx tezos-node[17054]: Aug  1 19:57:02 - validator.chain(1): Pushed: 2018-08-01T19:57:02Z, Treated: 2018-08-01T19:57:02Z, Completed: 2018-08-01T19:57:02Z
+```
+
+We recommend setting up a security group on your cloud provider that drops inbound connections to port 22 and adding your node to it when you do not need remote access to the node.
 
 In our next post we will setup a private baking node which makes use of this public relay node.
