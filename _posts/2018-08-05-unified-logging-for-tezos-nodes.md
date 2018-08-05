@@ -14,7 +14,7 @@ To fully secure our nodes we are aiming to remove remote shell access. In order 
 
 In the first instance we are going to use [Loggly](https://www.loggly.com/), primarily because it has a very small footprint, but it also has decent free tier.  In addition we can restrict the outbound traffic to a single port which makes the firewall configuration easier.  Ultimately we will move to either Splunk or ELK which we can host and manage ourselves, giving us full control, but until then Loggly will suffice enabling us to move forward with the more interesting parts of securing your baking infrastructure.
 
-It is recommended to do this setup before any other configuration on your server - we will provide a new tutorial for the [Public Node](2018-08-01-secure-tezos-public-node.md) incorpoating this setup in a subsequent post once we have a few other pieces in place.
+It is recommended to do this setup before any other configuration on your server - we will provide a new tutorial for the [Public Node]({{ site.baseurl }}{% post_url 2018-08-01-secure-tezos-public-node %}) incorpoating this setup in a subsequent post once we have a few other pieces in place.
 
 After signing up for your account on Loggly you will be given a [Customer Token](https://www.loggly.com/docs/customer-token-authentication-token/).  We will add this to an environment variable for use in the scripts that follow:
 
