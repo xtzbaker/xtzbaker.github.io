@@ -26,7 +26,7 @@ Next we will configure the necessary prerequistes for communicating with Loggly 
 
 ```bash
 # Install rsyslog-gnutls for communicating over TLS see https://www.loggly.com/docs/rsyslog-tls-configuration/
-sudo apt-get install rsyslog-gnutls
+sudo apt-get install -y rsyslog-gnutls
 
 ## Install the Loggly SSL certificates
 sudo mkdir -pv /etc/rsyslog.d/keys/ca.d
@@ -72,4 +72,8 @@ action(type="omfwd" protocol="tcp" target="logs-01.loggly.com" port="6514" templ
 service rsyslog restart
 ```
 
-You should now start seeing your logs appear on your Loggly account.
+You should now start seeing your logs appear on your Loggly account.  You can test it by executing the following which should log the text `BakeJar` to Loggly:
+
+```
+logger BakeJar
+```
