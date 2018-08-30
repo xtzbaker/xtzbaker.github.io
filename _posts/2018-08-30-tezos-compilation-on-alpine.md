@@ -83,7 +83,28 @@ There are 3 stages to the build:
 
 1. Compile `opam` for Alpine.  None of the available builds on the opam repository seemed to work, no harm in being able to compile it ourselves anyway.
 2. Compile `tezos` binaries.
-3. The last stage contains a minimal image containing the tezos binaries and only the necessary runtime dependencies.  It's nice to see we only need to add 3 additional packages to get things running. 
+3. The last stage contains a minimal image containing the tezos binaries and only the necessary runtime dependencies.  It's nice to see we only need to add 3 additional packages to get things running. If we list the installed packages using `apk list -I` we can see a very minimal footprint which we are really happy with
+
+```
+libusb-1.0.22-r0 x86_64 {libusb} (LGPL-2.0-or-later) [installed]
+musl-1.1.19-r10 x86_64 {musl} (MIT) [installed]
+zlib-1.2.11-r1 x86_64 {zlib} (zlib) [installed]
+apk-tools-2.10.0-r3 x86_64 {apk-tools} (GPL2) [installed]
+musl-utils-1.1.19-r10 x86_64 {musl} (MIT BSD GPL2+) [installed]
+alpine-baselayout-3.1.0-r0 x86_64 {alpine-baselayout} (GPL-2.0) [installed]
+libev-4.24-r0 x86_64 {libev} (BSD GPL) [installed]
+eudev-libs-3.2.5-r2 x86_64 {eudev} (GPL-2.0) [installed]
+gmp-6.1.2-r1 x86_64 {gmp} (LGPL-3.0) [installed]
+alpine-keys-2.1-r1 x86_64 {alpine-keys} (MIT) [installed]
+busybox-1.28.4-r1 x86_64 {busybox} (GPL-2.0) [installed]
+libressl2.7-libcrypto-2.7.4-r0 x86_64 {libressl} (custom) [installed]
+scanelf-1.2.3-r0 x86_64 {pax-utils} (GPL-2.0) [installed]
+libressl2.7-libtls-2.7.4-r0 x86_64 {libressl} (custom) [installed]
+libc-utils-0.7.1-r0 x86_64 {libc-dev} (BSD) [installed]
+ssl_client-1.28.4-r1 x86_64 {busybox} (GPL-2.0) [installed]
+hidapi-0.8.0_rc1-r0 x86_64 {hidapi} (custom) [installed]
+libressl2.7-libssl-2.7.4-r0 x86_64 {libressl} (custom) [installed]
+```
 
 With this exercise complete we're now comfortable that when our Raspberry Pi arrives we'll be in a position to get it up and running quickly with our Ledger Nano S and public nodes.
 
